@@ -1,0 +1,492 @@
+
+*{
+    box-sizing:border-box;
+}
+
+
+html,body{
+
+    margin:0;
+    padding:0;
+    width:100%;
+    height:100%;
+
+}
+
+
+body{
+
+    
+    display:flex;
+    justify-content:center;
+    padding-top: 80px;
+    overflow:hidden;
+
+}
+
+
+
+/* MAIN */
+
+.laadpaal-rings{
+
+    position:relative;
+    width:420px;
+    height:420px;
+
+}
+
+
+
+/* RINGS */
+
+.ring{
+
+    position:absolute;
+    top:50%;
+    left:50%;
+    border-radius:50%;
+    transform:translate(-50%,-50%);
+
+}
+
+
+
+/* OUTER CIRCLE */
+
+.ring-1{
+
+    width:100%;
+    height:100%;
+    background:#f8f7f4;
+
+    animation:ringZoom 4s infinite ease-in-out;
+
+}
+
+
+
+/* INNER CIRCLES */
+
+.ring-2{
+
+    width:86%;
+    height:86%;
+    background:#faf9f7;
+
+}
+
+
+.ring-3{
+
+    width:72%;
+    height:72%;
+    background:#fcfbfa;
+
+}
+
+
+
+.ring-4{
+
+    width:58%;
+    height:58%;
+    background:#fff;
+
+    box-shadow:0 10px 40px rgba(0,0,0,.05);
+
+}
+
+
+
+/* MOVING WAVE ONLY */
+
+.ring-wave{
+
+    width:58%;
+    height:58%;
+
+    background:rgba(255,255,255,.6);
+
+    animation:ringPulse 3s infinite ease-out;
+
+    z-index:5;
+
+}
+
+
+
+/* EXTRA BORDER */
+
+.ring-border{
+
+    width:130%;
+    height:130%;
+
+    background:transparent;
+
+    border:1px solid rgba(150,140,210,.45);
+
+}
+
+
+
+@keyframes ringZoom{
+
+    0%,100%{
+
+        transform:translate(-50%,-50%) scale(1);
+
+    }
+
+
+    50%{
+
+        transform:translate(-50%,-50%) scale(1.08);
+
+    }
+
+}
+
+
+
+@keyframes ringPulse{
+
+    0%{
+
+        transform:translate(-50%,-50%) scale(1);
+
+        opacity:.8;
+
+    }
+
+
+    100%{
+
+        transform:translate(-50%,-50%) scale(2.2);
+
+        opacity:0;
+
+    }
+
+}
+/* CENTER IMAGE */
+
+.center-image{
+
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    width:58%;
+    height:58%;
+
+    border-radius:50%;
+
+    overflow:hidden;
+
+    z-index:6;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+}
+
+
+
+.center-image img{
+
+    width:80%;
+    height:80%;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+}
+
+
+
+
+
+
+/* ICONS */
+
+
+.feature-icon{
+
+    position:absolute;
+
+    width:58px;
+    height:58px;
+
+    background:#fff;
+
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    z-index:10;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.12);
+
+    transition:.25s ease;
+
+}
+
+
+
+.feature-icon i{
+
+    font-size:24px;
+
+    color:#080450;
+
+}
+
+
+
+
+
+
+/* ICON POSITIONS */
+
+
+.icon-1{
+
+    top:-50px;
+
+    left:50px;
+
+}
+
+
+
+.icon-2{
+
+    top:-50px;
+
+    right:50px;
+
+}
+
+
+
+.icon-3{
+
+    top:50%;
+
+    left:-90px;
+
+    transform:translateY(-50%);
+
+}
+
+
+
+.icon-4{
+
+    top:50%;
+
+    right:-90px;
+
+    transform:translateY(-50%);
+
+}
+
+
+
+.icon-5{
+
+    bottom:-50px;
+
+    left:50px;
+
+}
+
+
+
+.icon-6{
+
+    bottom:-50px;
+
+    right:50px;
+
+}
+
+
+
+
+
+/* HOVER */
+
+
+.icon-1:hover,
+.icon-2:hover,
+.icon-5:hover,
+.icon-6:hover{
+
+    transform:scale(1.15);
+
+}
+
+
+
+.icon-3:hover,
+.icon-4:hover{
+
+    transform:translateY(-50%) scale(1.15);
+
+}
+/* TABLET */
+
+@media(max-width:1024px){
+
+.laadpaal-rings{
+
+    width:360px;
+    height:360px;
+
+}
+
+
+.icon-3{
+
+    left:-80px;
+
+}
+
+
+.icon-4{
+
+    right:-80px;
+
+}
+
+}
+
+
+
+
+
+/* MOBILE */
+
+@media(max-width:767px){
+
+.laadpaal-rings{
+
+    width:280px;
+    height:280px;
+
+}
+
+
+
+.feature-icon{
+
+    width:45px;
+    height:45px;
+
+}
+
+
+.feature-icon i{
+
+    font-size:18px;
+
+}
+
+
+
+.icon-1{
+
+    top:-43px;
+    left:35px;
+
+}
+
+
+.icon-2{
+
+    top:-43px;
+    right:35px;
+
+}
+
+
+.icon-3{
+bottom:-43px;
+    left:-60px;
+
+}
+
+
+.icon-4{
+     bottom:-43px;
+    right:-60px;
+
+}
+
+
+.icon-5{
+
+    bottom:-43px;
+    left:35px;
+
+}
+
+
+.icon-6{
+
+    bottom:-43px;
+    right:35px;
+
+}
+
+
+}
+
+
+
+
+
+
+
+/* SMALL MOBILE */
+
+
+@media(max-width:420px){
+
+
+.laadpaal-rings{
+
+    width:230px;
+    height:230px;
+
+}
+
+
+
+.feature-icon{
+
+    width:38px;
+    height:38px;
+
+}
+
+
+
+.feature-icon i{
+
+    font-size:15px;
+
+}
+
+
+}
